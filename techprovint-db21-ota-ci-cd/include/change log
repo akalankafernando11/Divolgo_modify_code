@@ -1,0 +1,37 @@
+Version 0.3.0
+
+1. Display Information Feature:
+    Battery status
+    Charging status
+    Connection status
+    Active Schedule status
+    OTA Update status
+
+2. Enhanced OTA Update Check Logic:
+    To initiate OTA update:
+    Press and hold the power button until you see the update icon on the display under the following conditions:
+    Device is plugged in for charging.
+    Battery voltage exceeds 3.9V.
+
+3. Automatic Rotation Stop Feature:
+    Halts the current schedule on every RTC day 2 (Monday) if:
+    The rotation started at least two days before day 2 (Monday).
+
+4. Improved Device Startup Conditions:
+    Device now starts only if remaining battery capacity is 40% or more.
+    If battery capacity is below 40%, the device indicates Red LED flashes (Five blinks) and powers off.
+
+Code Refinement:
+
+Removed unused variables and unnecessary EEPROM allocations.
+Utilizes RTC Ram memory instead of EEPROM for storing rotation image number.
+Avoids rewriting EEPROM with the same value.
+Optimized string data usage for Display options, reducing overall data consumption.
+All compilation warnings has been cleared.
+
+
+version 0.4.0
+
+0.4.1
+Bug fixxed:
+"value_corrupted" will be returned for EEPROM_read() if the read data length is 0.

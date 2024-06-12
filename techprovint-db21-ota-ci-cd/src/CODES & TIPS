@@ -1,0 +1,19 @@
+/*
+
+Battery log file status
+
+	EMT = Battery empty
+	CHO = Charging only
+	CHR = Charging and Running
+	FUL = Battery fully charged
+	UNF = Unplugged, Not fully charged
+	DIS = Battery discharging
+	NOC = Battery not charging, USB plugged
+
+
+	LED Blink
+
+	Notification LED
+		2 blinks @ 100ms on and off delay_ms > No WiFi
+
+*/
